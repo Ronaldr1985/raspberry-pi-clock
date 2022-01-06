@@ -1,11 +1,15 @@
-# Raspberry Pi Clocks
+# WaveShare 2.33" OLED Display
 
-Some Raspberry Pi Clocks.
-
-## Supported Screens
-
-Currently I've only written a simple clock for the [2.33" OLED display by WaveShare](https://thepihut.com/products/128x32-2-23inch-oled-display-hat-for-raspberry-pi).  However, I plan on adding support for more displays as time goes on.
+A small clock with IP address readout.
 
 ## Usage
 
-There is a branch for each screen, currently the only branch is WaveShare-233OLED.  There is a README in the branch for how to compile the program and how to run it.
+As simple as downloading the source code and compiling it.
+
+## Picture of it in action
+
+
+
+## Disclaimer
+
+I didn't write two of the files included in this repository, SSD1305.c and SSD1305.h.  They are here for your convenience.
