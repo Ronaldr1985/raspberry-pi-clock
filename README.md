@@ -2,6 +2,10 @@
 
 A small clock with IP address readout.
 
+## Dependencies
+
+The code requires the [BCM2835 library](https://www.airspayce.com/mikem/bcm2835/).
+
 ## Usage
 
 As simple as downloading the source code and compiling it.
