@@ -12,4 +12,4 @@ As simple as downloading the source code and compiling it.
 
 ## Disclaimer
 
-I didn't write two of the files included in this repository, SSD1305.c and SSD1305.h.  They are here for your convenience.
+I didn't write two of the files included in this repository, SSD1305.c and SSD1305.h, they were written by WaveShare.  I have included them here for your convenience.
