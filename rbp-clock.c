@@ -7,21 +7,10 @@
 #include <string.h> 
 #include <sys/ioctl.h>
 #include <sys/socket.h>
-#include <sys/sysinfo.h>
 #include <time.h>
 #include <unistd.h>
 
 #include "ssd1305.h"
-
-long get_uptime()
-{
-    struct sysinfo s_info;
-    int error = sysinfo(&s_info);
-    if(error != 0) {
-        printf("code error = %d\n", error);
-    }
-    return s_info.uptime;
-}
 
 void get_ip_address(char *adapter, char *ip)
 {
