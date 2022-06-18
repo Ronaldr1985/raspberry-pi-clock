@@ -4,24 +4,18 @@ NAME=rbp-clock
 
 TARGET=rbp-clock
 
-all: options ssd1305.o ${TARGET}.o $(TARGET)
-
-$(TARGET): $(TARGET).c ${TARGET}.o ssd1305.o
-	$(CC) -o $(TARGET) ${TARGET}.o ssd1305.o ${CFLAGS}
-
-ssd1305.o: ssd1305.c ssd1305.h
-	gcc -c ssd1305.c ${CFLAGS}
-
-${TARGET}.o: ${TARGET}.c ssd1305.h 
-	gcc -c ${TARGET}.c ${CFLAGS}
+all: options $(TARGET)
 
 options:
 	@echo ${NAME} build options:
 	@echo "CFLAGS   = ${CFLAGS}"
 	@echo "CC       = ${CC}"
 
+$(TARGET): options
+	$(CC) -o $(TARGET) src/$(TARGET).c src/lib/ssd1305.c $(CFLAGS)
+
 clean:
-	rm ssd1305.o ${TARGET}.o ${TARGET}
+	rm -f ${TARGET}
 
 install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
